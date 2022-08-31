@@ -1,20 +1,15 @@
-package com.example.digitallockingpado
+package com.example.fechadurasdigitais
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import android.widget.Toast
 import com.google.android.material.appbar.MaterialToolbar
-import com.example.digitallockingpado.Fde600wPage as Fde600wPage1
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val btn = findViewById<Button>(R.id.btn)
         val mainToolBar = findViewById<MaterialToolbar>(R.id.mainToolBar)
 
         mainToolBar.setNavigationOnClickListener {
@@ -23,7 +18,6 @@ class MainActivity : AppCompatActivity() {
                 "Hamburger pressionado!!!",
                 Toast.LENGTH_SHORT
             ).show()
-            Log.e("app", "menu click")
         }
 
         mainToolBar.setOnMenuItemClickListener { menuItem ->
@@ -49,9 +43,5 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
-//        btn.setOnClickListener {
-//            startActivity(Intent(this, Fde600wPage1::class.java))
-//        }
     }
 }

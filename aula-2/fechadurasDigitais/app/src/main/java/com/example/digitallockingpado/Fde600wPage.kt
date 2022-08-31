@@ -1,7 +1,5 @@
 package com.example.digitallockingpado
 
-import android.app.ProgressDialog.show
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
