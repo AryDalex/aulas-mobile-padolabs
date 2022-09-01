@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">FechadurasDigitais</string>
+    <string name="search">Procurar</string>
+    <string name="content_description_logo_pado">Pado</string>
+    <string name="o_mundo_cada_vez_mais_digital">O MUNDO\nCADA VEZ MAIS\n<b>DIGITAL</b></string>
+    <string name="novidades">Novidades</string>
+    <string name="produtos">Produtos</string>
+    <string name="fde_600w_nome">FDE-600W</string>
+    <string name="fde_600w_descricao">FECHADURA DIGITAL DE  EMBUTIR A PROVA D’ÁGUA E COM CONECTIVIDADE</string>
+    <string name="fde_600w_preco">R$1.500,00</string>
+    <string name="fde_300w_nome">FDE-300W</string>
+    <string name="fde_300w_descricao">FECHADURA DIGITAL DE  EMBUTIR A PROVA D’ÁGUA E CONECTIVIDADE</string>
+    <string name="fde_300w_preco">R$1.500,00</string>
+    <string name="fde_500Pro_nome">FD-500 Pro</string>
+    <string name="fde_500Pro_descricao">FECHADURA DIGITAL DE  EMBUTIR COM CONECTIVIDADE</string>
+    <string name="fde_500Pro_preco">R$1.500,00</string>
+    <string name="fde_201r_nome">FDE-201R</string>
+    <string name="fde_201r_descricao">FECHADURA DIGITAL DE  EMBUTIR COM ROLLETE</string>
+    <string name="fde_201r_preco">R$1.500,00</string>
+    <string name="fde_201_nome">FDE-201</string>
+    <string name="fde_201_descricao">FECHADURA DIGITAL DE  EMBUTIR</string>
+    <string name="fde_201_preco">R$1.500,00</string>
+    <string name="fds_101_nome">FDE-201</string>
+    <string name="fds_101_descricao">FECHADURA DIGITAL DE  EMBUTIR</string>
+    <string name="fds_101_preco">R$1.500,00</string>
+    <string name="fds_10_nome">FDS-10</string>
+    <string name="fds_10_descricao">FECHADURA DIGITAL DE  SOBREPOR</string>
+    <string name="fds_10_preco">R$1.500,00</string>
+    <string name="fdv_200_nome">FDV-200</string>
+    <string name="fdv_200_descricao">FECHADURA DIGITAL DE  SOBREPOR PARA PORTAS DE VIDRO</string>
+    <string name="fdv_200_preco">R$1.500,00</string>
+    <string name="fde_600w_descricao_main">FECHADURA DIGITAL DE EMBUTIR</string>
+    <string name="agua_descricao">Resistente à água</string>
+    <string name="wifi_descricao">Acesso remoto via wi-fi</string>
+    <string name="teclado_descricao">Teclado numérico</string>
+    <string name="alexa_descricao">Compatível com Alexa</string>
+    <string name="biometria_descricao">Leitor Biométrico</string>
+    <string name="cartao_descricao">Acesso por cartão</string>
+    <string name="botao_text">Comprar agora</string>
+    <string name="fde_300w_descricao_main">FECHADURA DIGITAL DE EMBUTIR</string>
+    <string name="chave_descricao">Chave de emergência</string>
+    <string name="fde_500Pro_descricao_main">FECHADURA DIGITAL DE EMBUTIR</string>
+
+</resources>
