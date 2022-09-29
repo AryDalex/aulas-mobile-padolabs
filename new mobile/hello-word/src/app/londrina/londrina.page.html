@@ -1,0 +1,66 @@
+<ion-header id="cabecalho">
+  <img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
+</ion-header>
+
+<ion-content>
+  <div class="caminhos">
+    <a class="caminho" href="#">Home</a>
+    <p class="caminho">></p> 
+    <a class="caminho" href="#">Cidades</a>
+    <p class="caminho">></p>
+    <a class="caminho" href="#">Lista</a>
+    <p class="caminho">></p>
+    <a class="caminho" href="#">Londrina</a>
+  </div>
+
+  <ion-card class="cards">
+    <img class="img_cidade" src="../../assets/londrina.png" alt="foto da cidade">
+    <ion-card-header>
+      <ion-card-subtitle class="text">DESTINO</ion-card-subtitle>
+      <ion-card-title class="text title">LONDRINA, PR</ion-card-title>
+      <p class="text">Londrina (pronúncia no IPA: [lõˈdɾinɐ]) é um município brasileiro localizado no estado do Paraná, na Região Sul do Brasil, distando 381 km da capital paranaense, Curitiba. É considerada pela CGU a cidade mais transparente do Paraná.[8] Sua população, conforme estimativas do IBGE de 2021, era de 580 870 habitantes,[4] sendo a segunda cidade mais populosa do estado e a quarta da Região Sul, depois da capital estadual, Curitiba, de Porto Alegre e Joinville. Importante polo de desenvolvimento estadual e regional, Londrina é um importante eixo que liga o Sul ao Sudeste do país, sendo um importante centro urbano, econômico, industrial, financeiro, administrativo e cultural do norte do Paraná.</p>
+      <p class="text">Fundada em 10 de dezembro de 1934 através do Decreto Estadual nº 2519[9] com traçado urbanístico planejado pelo urbanista Jorge Macedo Vieira, seguindo o princípio de Ebenezer Howard de cidade-jardim.[10] A cidade floresceu e experimentou um alto índice de crescimento populacional e econômico durante todo o século XX, amparado inicialmente pelo plantio e comercialização do café, tendo Londrina ganhado a alcunha de "Capital do Café" naquele período. A partir dos anos 1970, o perfil econômico londrinense foi se alterando progressivamente, tendo evoluído para um importante e diversificado centro industrial e econômico regional, até se tornar uma das principais cidades do interior do Brasil. Sede da Região Metropolitana de Londrina (RML), o segundo maior aglomerado urbano do estado, da qual é sede, que contava com uma população estimada em 1 057 660 habitantes em 2013.</p>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-accordion-group class="accordion">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="dark">
+        <ion-label>População</ion-label>
+      </ion-item>
+      <div class="ion-padding text fundo" slot="content">
+        É considerada pela CGU a cidade mais transparente do Paraná. Sua população, conforme estimativas do IBGE de
+        2021, era de 580 870 habitantes, sendo a segunda cidade mais populosa do estado e a quarta da Região Sul.
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="dark">
+        <ion-label>Area total</ion-label>
+      </ion-item>
+      <div class="ion-padding text fundo" slot="content">
+        Londrina é um município brasileiro localizado no estado do Paraná, na Região Sul do Brasil, distando 381 km da
+        capital paranaense, Curitiba. É considerada pela CGU a cidade mais transparente do Paraná.
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="dark">
+        <ion-label>Prefeito</ion-label>
+      </ion-item>
+      <div class="ion-padding text fundo" slot="content">
+        Marcelo Belinati Martins é um médico, advogado e político brasileiro filiado ao Progressistas. Foi eleito
+        prefeito de Londrina nas eleições de 2016 e reeleito em 2020.
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fourth">
+      <ion-item slot="header" color="dark">
+        <ion-label>Altitude</ion-label>
+      </ion-item>
+      <div class="ion-padding text fundo" slot="content">
+        610 m
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-button (click)='goToPage()' class="btn_mais">VOLTAR</ion-button>
+
+</ion-content>

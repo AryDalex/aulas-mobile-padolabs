@@ -1,0 +1,23 @@
+<ion-header id="cabecalho">
+  <img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="caminhos">
+    <a class="caminho" href="#">Home</a>
+    <p class="caminho">></p> 
+    <a class="caminho" href="#">Cidades</a>
+    <p class="caminho">></p>
+    <a class="caminho" href="#">Lista</a>
+  </div>
+
+  <ion-card class="cards" *ngFor="let myData of getData()">
+    <img class="img_cidade" [src]="myData.imageUrl" alt="foto da cidade">
+    <ion-card-header>
+      <ion-card-subtitle class="text">{{myData.subtitle}}</ion-card-subtitle>
+      <ion-card-title class="text title">{{myData.title}}</ion-card-title>
+      <p class="text">{{myData.p}}</p>
+      <ion-button (click)='goToPage()' class="btn_mais">{{myData.button}}</ion-button>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
