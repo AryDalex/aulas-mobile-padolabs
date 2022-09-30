@@ -13,7 +13,7 @@ export class LondrinaPage implements OnInit {
   ngOnInit() {
   }
 
-  goToPage() {
+  goToPageHome() {
     this.router.navigate(['/home']);
   }
 
