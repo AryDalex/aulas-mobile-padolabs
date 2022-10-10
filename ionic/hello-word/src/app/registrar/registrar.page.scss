@@ -1,0 +1,55 @@
+ion-content {
+    --background: #1f1b3f;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 10vh 0px;
+    height: 10vw;
+}
+
+.img_logo {
+    width: auto;
+    height: 90px;
+    margin: 1.2vw;
+}
+
+form {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+    font-size: 12px;
+}
+
+.input_register {
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background: #2C2656;
+    color: #fff;
+}
+
+.btn_entbtn_registerrar {
+    height: 6vh;
+}
+
+.btn_register, .input_register {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.voltar {
+    margin-top: 10%;
+    padding: 20px;
+}
+
+.btn_voltar {
+    width: 100%;
+    --background: #fff;
+    --color: #000;
+}

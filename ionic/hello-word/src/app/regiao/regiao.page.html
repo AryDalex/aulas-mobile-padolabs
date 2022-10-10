@@ -1,0 +1,15 @@
+<ion-header id="cabecalho">
+  <img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="caminhos">
+    <a class="caminho" href="#"></a>
+  </div>
+
+  <ion-card *ngFor="let myData of getData()">
+    <ion-card-header class="cards">
+      <ion-card-title class="text title">{{myData.title}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
