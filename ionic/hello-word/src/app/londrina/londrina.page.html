@@ -6,9 +6,9 @@
   <div class="caminhos">
     <a class="caminho" href="#">Home</a>
     <p class="caminho">></p> 
-    <a class="caminho" href="#">Cidades</a>
+    <a class="caminho" href="http://localhost:8100/regiao">Cidades</a>
     <p class="caminho">></p>
-    <a class="caminho" href="#" (click)='goToPageHome()'>Lista</a>
+    <a class="caminho" href="http://localhost:8100/norte">Lista</a>
     <p class="caminho">></p>
     <a class="caminho" href="#">Londrina</a>
   </div>
@@ -61,6 +61,6 @@
     </ion-accordion>
   </ion-accordion-group>
 
-  <ion-button (click)='goToPageHome()' class="btn_mais">VOLTAR</ion-button>
+  <ion-button (click)='goToPageHome("norte")' class="btn_mais">VOLTAR</ion-button>
 
 </ion-content>

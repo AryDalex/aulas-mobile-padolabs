@@ -10,33 +10,43 @@ export class RegiaoPage implements OnInit {
 
   private data: Interface[] = [{
       id: 1,
-      imageUrl: 'assets/regiao.png',
       title: 'NORTE',
       host: '/norte'
     },
     {
       id: 2,
-      imageUrl: 'assets/regiao.png',
       title: 'NORDESTE',
       host: '/nordeste'
     },
     {
       id: 3,
-      imageUrl: 'assets/regiao.png',
-      title: 'CESTRO-OESTE',
-      host: '/centrooeste'
+      title: 'NOROESTE',
+      host: '/noroeste'
     },
     {
       id: 4,
-      imageUrl: 'assets/regiao.png',
       title: 'SUL',
       host: '/sul'
     },
     {
       id: 5,
-      imageUrl: 'assets/regiao.png',
       title: 'SULDESTE',
       host: '/suldeste'
+    },
+    {
+      id: 6,
+      title: 'SULDOESTE',
+      host: '/suldoeste'
+    },
+    {
+      id: 7,
+      title: 'LESTE',
+      host: '/leste'
+    },
+    {
+      id: 8,
+      title: 'OESTE',
+      host: '/oeste'
     },
   ];
 
@@ -57,7 +67,6 @@ export class RegiaoPage implements OnInit {
 
 interface Interface {
   id: number;
-  imageUrl: string;
   title: string;
   host: string;
 }

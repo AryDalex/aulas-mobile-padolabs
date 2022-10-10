@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { CidadesService } from '../cidades.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-norte',
+  templateUrl: './norte.page.html',
+  styleUrls: ['./norte.page.scss'],
 })
-export class HomePage {
-  
+export class NortePage implements OnInit {
+
   private data: Interface[] = [{
       id: 1,
       imageUrl: 'assets/londrina.png',
@@ -40,6 +39,9 @@ export class HomePage {
 
   constructor(private router: Router) { }
 
+  ngOnInit() {
+  }
+
   protected getData(): Interface[] {
     return this.data;
   }
@@ -48,23 +50,23 @@ export class HomePage {
     this.router.navigate(['/' + host]);
   }
 
-  // Cidades: object;
+// Cidades: object;
 
-  // constructor(private router: Router, private CidadesService: CidadesService) {
-  //   this.Cidades = [];
-  // }
+// constructor(private router: Router, private CidadesService: CidadesService) {
+//   this.Cidades = [];
+// }
 
-  // ngOnInit() {
-  //   this.CidadesService.BuscarCidades().subscribe(data => {
-  //     console.log(data);
-  //     this.Cidades = data;
-  //   })
-  // }
+// ngOnInit() {
+//   this.CidadesService.BuscarCidades().subscribe(data => {
+//     console.log(data);
+//     this.Cidades = data;
+//   })
+// }
 
-  // goToPage(Cidade) {
-  //   console.log(Cidade);
-  //   this.router.navigate(['/cidade'], {state: { date: Cidade }});
-  // }
+// goToPage(Cidade) {
+//   console.log(Cidade);
+//   this.router.navigate(['/cidade'], {state: { date: Cidade }});
+// }
 
 }
 

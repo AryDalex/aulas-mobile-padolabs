@@ -24,16 +24,16 @@ const routes: Routes = [
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
-    path: 'cidade',
-    loadChildren: () => import('./cidade/cidade.module').then( m => m.CidadePageModule)
-  },
-  {
     path: 'registrar',
     loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
   },
   {
     path: 'regiao',
     loadChildren: () => import('./regiao/regiao.module').then( m => m.RegiaoPageModule)
+  },
+  {
+    path: 'norte',
+    loadChildren: () => import('./norte/norte.module').then( m => m.NortePageModule)
   },
 ];
 

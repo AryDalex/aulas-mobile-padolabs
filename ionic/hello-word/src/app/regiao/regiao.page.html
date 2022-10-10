@@ -4,12 +4,20 @@
 
 <ion-content [fullscreen]="true">
   <div class="caminhos">
-    <a class="caminho" href="#"></a>
+    <a class="caminho" href="#">SELECIONE UMA REGIÃO</a>
   </div>
 
-  <ion-card *ngFor="let myData of getData()">
-    <ion-card-header class="cards">
+  <ion-card class="cards" *ngFor="let myData of getData()">
+    <ion-card-header (click)='goToPage(myData.host)' class="card">
       <ion-card-title class="text title">{{myData.title}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 </ion-content>
+
+<ion-footer>
+  <div class="footer">
+    <img class="footer_image" src="../../assets/home.png" alt="">
+    <img class="footer_image" src="../../assets/star.png" alt="">
+    <img class="footer_image" src="../../assets/perfil.png" alt="">
+  </div>
+</ion-footer>
