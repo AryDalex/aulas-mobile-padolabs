@@ -35,7 +35,7 @@ private value: InterfaceConfig[] = [{
   id: 2,
   keyName: 'help-circle-outline',
   title: 'Ajuda',
-  host: '/',
+  host: '/ajuda',
   DoKeyName: 'chevron-forward-outline'
 },
 {

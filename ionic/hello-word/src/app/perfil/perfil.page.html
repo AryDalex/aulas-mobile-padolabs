@@ -1,6 +1,6 @@
 <body id="page">
   <div id="cabecalho">
-    <ion-icon class="icon" name="arrow-back-outline"></ion-icon>
+    <ion-icon (click)='goToPage("regiao")'  name="arrow-back-outline"></ion-icon>
     <p class="title">MEU PERFIL</p>
     <ion-icon name=""></ion-icon>
   </div>
@@ -28,7 +28,7 @@
           <ion-icon class="textDiferente" name="{{myData.keyName}}"></ion-icon>
           <p class="text textDiferente">{{myData.title}}</p>
         </div>
-        <ion-icon class="textDiferente" name="{{myData.DoKeyName}}"></ion-icon>
+        <ion-icon class="textDiferente" (click)='goToPage(myData.host)' name="{{myData.DoKeyName}}"></ion-icon>
       </div>
     </div>
   </ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ajuda',
@@ -63,9 +64,13 @@ export class AjudaPage implements OnInit {
   }
 ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToPage(host) {
+    this.router.navigate(['/' + host]);
   }
 
   protected getData(): Interface[] {
