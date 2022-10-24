@@ -1,9 +1,11 @@
 <body id="page">
+
   <div id="cabecalho">
     <ion-icon (click)='goToPage("regiao")'  name="arrow-back-outline"></ion-icon>
     <p class="title">MEU PERFIL</p>
     <ion-icon name=""></ion-icon>
   </div>
+
   <ion-content id="page">
     <ion-card-header class="titlePage">
       <ion-card-title>Perfil</ion-card-title>
@@ -22,6 +24,7 @@
         </div>
       </div>
     </div>
+    
     <div class="values">
       <div class="card" *ngFor="let myData of getValue()">
         <div class="dadosTopic">
@@ -32,4 +35,5 @@
       </div>
     </div>
   </ion-content>
+
 </body>
