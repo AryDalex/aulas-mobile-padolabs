@@ -1,0 +1,54 @@
+#page {
+    background-color: #222222;
+}
+
+#cabecalho {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    margin: 10px 10px;
+    font-size: 12px;
+}
+
+ion-content{
+    --background: #222222;   
+}
+
+.titulo{
+    display: flex;
+    justify-content:center;
+    color: #807e7e;
+    flex-direction:column;
+    padding: 0 20px;
+    h1{
+        font-size: 17px;
+        padding-left: 30px;
+    }
+    #linha{
+        width: 100%;
+        border-bottom: 1px solid #807e7e;
+    }
+}
+
+.opcoes{
+    width: auto;
+    margin: 5px 20px;
+    .opcaoTxt{
+        margin: 0 10px;
+        display: flex;
+        justify-content:space-between;
+        // background-color: #bd6767;
+        align-items:center;
+        color: #fff;
+        font-size: 12px;
+    }
+    .setaOpcao{
+        color: #807e7e;
+    }
+}
+
+ion-icon {
+    font-size: 20px;
+}

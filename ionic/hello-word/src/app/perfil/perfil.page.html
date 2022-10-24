@@ -1,9 +1,35 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>perfil</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<body id="page">
+  <div id="cabecalho">
+    <ion-icon class="icon" name="arrow-back-outline"></ion-icon>
+    <p class="title">MEU PERFIL</p>
+    <ion-icon name=""></ion-icon>
+  </div>
+  <ion-content id="page">
+    <ion-card-header class="titlePage">
+      <ion-card-title>Perfil</ion-card-title>
+      <ion-card-subtitle>Configurações de perfil</ion-card-subtitle>
+    </ion-card-header>
+    <div class="datas">
+      <div class="card">
+        <p class="text email">Email</p>
+        <p class="text email">arielly.oliveira@gmail.com</p>
+      </div>
+      <div class="card" *ngFor="let myData of getData()">
+        <p class="text">{{myData.title}}</p>
+        <div class="dadosTopic">
+          <p class="text">{{myData.dados}}</p>
+          <ion-icon name="{{myData.keyName}}"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="values">
+      <div class="card" *ngFor="let myData of getValue()">
+        <div class="dadosTopic">
+          <ion-icon class="textDiferente" name="{{myData.keyName}}"></ion-icon>
+          <p class="text textDiferente">{{myData.title}}</p>
+        </div>
+        <ion-icon class="textDiferente" name="{{myData.DoKeyName}}"></ion-icon>
+      </div>
+    </div>
+  </ion-content>
+</body>

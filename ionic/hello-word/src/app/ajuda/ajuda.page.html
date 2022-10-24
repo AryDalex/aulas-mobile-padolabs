@@ -1,0 +1,23 @@
+<body id="page">
+
+  <div id="cabecalho">
+    <ion-icon class="icon" name="arrow-back-outline"></ion-icon>
+    <p class="title">AJUDA</p>
+    <ion-icon name=""></ion-icon>
+  </div>
+  <ion-content class="principal">
+
+    <div class="titulo">
+      <h1>Ajuda</h1>
+      <div id="linha"></div>
+    </div>
+
+    <div class="opcoes">
+      <div class="opcaoTxt" *ngFor="let myData of getData()">
+        <p>{{myData.p}}</p>
+        <ion-icon class="setaOpcao" name="{{myData.keyName}}"></ion-icon>
+      </div>
+    </div>
+
+  </ion-content>
+</body>
