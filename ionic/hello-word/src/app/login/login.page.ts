@@ -13,8 +13,8 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  goToPage() {
-    this.router.navigate(['/regiao']);
+  goToPage(host) {
+    this.router.navigate(['/' + host]);
   }
 
 }
