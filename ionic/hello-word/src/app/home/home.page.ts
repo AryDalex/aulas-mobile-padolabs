@@ -36,7 +36,7 @@ export class HomePage {
     {
       id: 6,
       title: 'LESTE',
-      host: 'cidades'
+      host: 'cidades',
     },
   ];
 
