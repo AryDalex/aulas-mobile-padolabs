@@ -14,8 +14,8 @@ export class RegistrarPage implements OnInit {
   ngOnInit() {
   }
 
-  goToPage() {
-    this.router.navigate(['/login']);
+  goToPage(host) {
+    this.router.navigate(['/' + host]);
   }
 
 }

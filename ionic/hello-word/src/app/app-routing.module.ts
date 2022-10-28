@@ -12,10 +12,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'londrina',
-    loadChildren: () => import('./londrina/londrina.module').then( m => m.LondrinaPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -28,16 +24,16 @@ const routes: Routes = [
     loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
   },
   {
-    path: 'regiao',
-    loadChildren: () => import('./regiao/regiao.module').then( m => m.RegiaoPageModule)
-  },
-  {
-    path: 'norte',
-    loadChildren: () => import('./norte/norte.module').then( m => m.NortePageModule)
-  },
-  {
     path: 'ajuda',
     loadChildren: () => import('./ajuda/ajuda.module').then( m => m.AjudaPageModule)
+  },
+  {
+    path: 'cidade',
+    loadChildren: () => import('./cidade/cidade.module').then( m => m.CidadePageModule)
+  },
+  {
+    path: 'cidades',
+    loadChildren: () => import('./cidades/cidades.module').then( m => m.CidadesPageModule)
   },
 ];
 

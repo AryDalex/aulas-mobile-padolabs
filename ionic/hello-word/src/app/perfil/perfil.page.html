@@ -1,7 +1,7 @@
 <body id="page">
 
   <div id="cabecalho">
-    <ion-icon (click)='goToPage("regiao")'  name="arrow-back-outline"></ion-icon>
+    <ion-icon class="seta_voltar" (click)='goToPage("home")'  name="arrow-back-outline"></ion-icon>
     <p class="title">MEU PERFIL</p>
     <ion-icon name=""></ion-icon>
   </div>
@@ -20,7 +20,7 @@
         <p class="text">{{myData.title}}</p>
         <div class="dadosTopic">
           <p class="text">{{myData.dados}}</p>
-          <ion-icon name="{{myData.keyName}}"></ion-icon>
+          <ion-icon class="seta" name="{{myData.keyName}}"></ion-icon>
         </div>
       </div>
     </div>

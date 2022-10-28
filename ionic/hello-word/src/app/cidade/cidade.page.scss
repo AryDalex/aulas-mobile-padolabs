@@ -1,5 +1,5 @@
 #cabecalho {
-    background: #1f1b3f;
+    background: #19133E;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +10,7 @@
     height: 78px;
     margin: 1.2vw;
 }
-  
+
 .caminhos {
     display: flex;
     align-items: center;
@@ -19,38 +19,49 @@
     font-size: 12px;
 }
   
-  a {
+a {
     text-decoration: none;
 }
   
 .caminho {
     color: #ffffff;
 }
-  
+
 .cards {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     margin: 12px;
 }
-  
-.title {
-    font-weight: bold;
-}
-  
+
 .img_cidade {
     width: 100%;
     height: auto;
 }
-  
+
 .text {
     color: #000000;
 }
-  
+
+.title {
+    font-weight: bold;
+}
+
+.fundo {
+    background-color: #ffffff;
+}
+
+.accordion {
+    margin: 15px 12px;
+    margin-bottom: 3vh;
+}
+
 .btn_mais {
     color: #ffffff;
     padding: 5px;
-    width: 100%;
+    width: 93%;
     height: 5vh;
+    border-radius: 3px;
     font-size: 12px;
+    margin: 12px;
 }

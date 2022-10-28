@@ -2,13 +2,11 @@
   <img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="dark">
   <div class="caminhos">
-    <a class="caminho" href="#">Home</a>
+    <p class="caminho" (click)='goToPage("home")'>Home</p>
     <p class="caminho">></p> 
-    <a class="caminho" href="http://localhost:8100/regiao">Cidades</a>
-    <p class="caminho">></p>
-    <a class="caminho" href="#">Lista</a>
+    <p class="caminho" (click)='goToPage("cidades")'>Cidades</p>
   </div>
 
   <ion-card class="cards" *ngFor="let myData of getData()">

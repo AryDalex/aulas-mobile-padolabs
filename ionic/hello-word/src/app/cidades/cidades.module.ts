@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { NortePageRoutingModule } from './norte-routing.module';
+import { CidadesPageRoutingModule } from './cidades-routing.module';
 
-import { NortePage } from './norte.page';
+import { CidadesPage } from './cidades.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NortePageRoutingModule
+    CidadesPageRoutingModule
   ],
-  declarations: [NortePage]
+  declarations: [CidadesPage]
 })
-export class NortePageModule {}
+export class CidadesPageModule {}

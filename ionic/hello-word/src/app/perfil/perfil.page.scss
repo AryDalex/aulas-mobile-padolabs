@@ -52,6 +52,10 @@ ion-icon {
     color: #3D3D3D;
 }
 
-.textDiferente {
+.textDiferente, .seta {
     color: #969494;
+}
+
+p, .seta_voltar, ion-card-title {
+    color: white;
 }

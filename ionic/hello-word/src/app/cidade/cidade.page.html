@@ -1,0 +1,61 @@
+<ion-header id="cabecalho">
+  	<img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
+</ion-header>
+
+<ion-content color="dark" *ngFor="let myData of getData()">
+	<div class="caminhos">
+		<p class="caminho" (click)='goToPageHome("home")'>Home</p>
+		<p class="caminho">></p> 
+		<p class="caminho" (click)='goToPageHome("cidades")'>Cidades</p>
+		<p class="caminho">></p>
+		<p class="caminho" (click)='goToPageHome("cidade")'>Cidade</p>
+	</div>
+
+	<ion-card class="cards">
+		<img class="img_cidade" [src]="myData.imageUrl" alt="foto da cidade">
+		<ion-card-header>
+			<ion-card-subtitle class="text">{{myData.subtitulo}}</ion-card-subtitle>
+			<ion-card-title class="text title">{{myData.title}}</ion-card-title>
+			<p class="text">{{myData.texto1}}</p>
+			<p class="text">{{myData.texto2}}</p>
+		</ion-card-header>
+	</ion-card>
+
+	<ion-accordion-group class="accordion">
+		<ion-accordion value="first">
+		<ion-item slot="header" color="light">
+			<ion-label>População</ion-label>
+		</ion-item>
+		<div class="ion-padding text fundo" slot="content">
+			{{myData.populacao}}
+		</div>
+		</ion-accordion>
+		<ion-accordion value="second">
+		<ion-item slot="header" color="light">
+			<ion-label>Area total</ion-label>
+		</ion-item>
+		<div class="ion-padding text fundo" slot="content">
+			{{myData.area}}
+		</div>
+		</ion-accordion>
+		<ion-accordion value="third">
+		<ion-item slot="header" color="light">
+			<ion-label>Prefeito</ion-label>
+		</ion-item>
+		<div class="ion-padding text fundo" slot="content">
+			{{myData.prefeito}}
+		</div>
+		</ion-accordion>
+		<ion-accordion value="fourth">
+		<ion-item slot="header" color="light">
+			<ion-label>Altitude</ion-label>
+		</ion-item>
+		<div class="ion-padding text fundo" slot="content">
+			{{myData.altitude}}
+		</div>
+		</ion-accordion>
+	</ion-accordion-group>
+
+	<ion-button (click)='goToPageHome("cidades")' class="btn_mais">VOLTAR</ion-button>
+
+</ion-content>

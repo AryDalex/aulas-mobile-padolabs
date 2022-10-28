@@ -13,7 +13,7 @@ export class CidadesService {
     
   };
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   BuscarCidades(): Observable<object> {
 

@@ -8,13 +8,27 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
+  public email: String = undefined;
+  public password: String = undefined;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  goToPage() {
-    this.router.navigate(['/regiao']);
+  // onSubmit() {
+  //   const data = {
+  //     email: this.email,
+  //     password: this.password,
+  //   }
+
+  //   this.UserService.userLogin(data).subscribe( data => {
+
+  //   })
+  // }
+
+  goToPage(host) {
+    this.router.navigate(['/' + host]);
   }
 
 }
