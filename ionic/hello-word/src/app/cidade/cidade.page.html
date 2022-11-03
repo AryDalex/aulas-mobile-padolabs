@@ -1,4 +1,91 @@
 <ion-header id="cabecalho">
+	<img
+		class="img_logo" 
+		src="http://padolabs.github.io/assets/img/PadoLabsLogo.webp" 
+		alt="logo da padolabs">
+</ion-header>
+
+<ion-content color="dark">
+
+	<ion-breadcrumbs class="caminhos">
+        <p class="caminho" href="home">Home</p>
+		<p>></p>
+        <p class="caminho" href="cidades">{{Cidade.cityRegion}}</p>
+		<p>></p>
+		<p class="caminho">{{Cidade.cityName}}</p>
+    </ion-breadcrumbs>
+
+	<ion-card class="cards">
+		<img 
+			class="img_cidade"
+			src="{{Cidade.cityImage}}"
+			alt="foto da cidade"
+		/>
+
+		<ion-card-header>
+			<ion-card-subtitle class="text">DESTINO</ion-card-subtitle>
+			<ion-card-title class="text title">{{Cidade.cityRegion}}, {{Cidade.cityUf}}</ion-card-title>
+		</ion-card-header>
+
+		<ion-card-content>
+			<ion-text class="text">{{Cidade.cityDescription}}</ion-text>
+		</ion-card-content>
+  	</ion-card>
+
+
+	<ion-accordion-group class="accordion">
+		<ion-accordion value="first">
+			<ion-item slot="header" color="light">
+				<ion-label>População</ion-label>
+			</ion-item>
+			<div class="ion-padding text fundo" slot="content">
+				{{Cidade.cityPopulation}}
+			</div>
+		</ion-accordion>
+
+		<ion-accordion value="second">
+			<ion-item slot="header" color="light">
+				<ion-label>Area total</ion-label>
+			</ion-item>
+			<div class="ion-padding text fundo" slot="content">
+				{{Cidade.cityArea}}
+			</div>
+		</ion-accordion>
+
+		<ion-accordion value="third">
+			<ion-item slot="header" color="light">
+				<ion-label>Prefeito</ion-label>
+			</ion-item>
+			<div class="ion-padding text fundo" slot="content">
+				{{Cidade.cityMayor}}
+			</div>
+		</ion-accordion>
+
+		<ion-accordion value="fourth">
+			<ion-item slot="header" color="light">
+				<ion-label>Altitude</ion-label>
+			</ion-item>
+			<div class="ion-padding text fundo" slot="content">
+				{{Cidade.cityAltitude}}
+			</div>
+		</ion-accordion>
+  	</ion-accordion-group>
+
+  	<ion-button (click)='goToPage("cidades")' class="btn_mais">
+		<ion-text>VOLTAR</ion-text>
+	</ion-button>
+
+</ion-content>
+
+<ion-footer>
+    <div class="footer">
+        <ion-icon class="footer_image" (click)='goToPage("home")' name="home-outline"></ion-icon>
+        <ion-icon class="footer_image" (click)='goToPage("favorito")' name="star-outline"></ion-icon>
+        <ion-icon class="footer_image" (click)='goToPage("perfil")' name="person-outline"></ion-icon>
+    </div>
+</ion-footer>
+
+<!-- <ion-header id="cabecalho">
   	<img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
 </ion-header>
 
@@ -58,4 +145,4 @@
 
 	<ion-button (click)='goToPageHome("cidades")' class="btn_mais">VOLTAR</ion-button>
 
-</ion-content>
+</ion-content> -->

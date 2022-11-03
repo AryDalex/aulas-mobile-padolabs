@@ -1,4 +1,22 @@
 <ion-content>
+    <div class="logo">
+        <img 
+            class="img_logo" 
+            src="http://padolabs.github.io/assets/img/PadoLabsLogo.webp" 
+            alt="logo da padolabs"
+        />
+    </div>
+    
+    <div class="login">
+        <ion-input class="input_login" [{ ngModel }]="email" placeholder="LOGIN"></ion-input>
+        <ion-input class="input_login" [{ ngModel }]="password" placeholder="SENHA"></ion-input>
+        <ion-button class="btn_entrar" (click)='onSubmit()'>ENTRAR</ion-button>
+    </div>
+    
+    <p>NÃO TEM CONTA? <b class="btn_registrar" (click)='goToPage()'>REGISTRE-SE</b></p>
+</ion-content>
+
+<!-- <ion-content>
   <div class="logo">
     <img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
   </div>
@@ -10,4 +28,4 @@
   </form>
 
   <p>NÃO TEM CONTA? <b class="registrar" (click)='goToPage("registrar")'>REGISTRE-SE</b></p>
-</ion-content>
+</ion-content> -->

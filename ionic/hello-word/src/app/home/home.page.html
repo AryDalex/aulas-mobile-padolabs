@@ -1,23 +1,23 @@
 <ion-header id="cabecalho">
-  <img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
+    <img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
 </ion-header>
 
 <ion-content [fullscreen]="true" color="dark">
-  <div class="caminhos">
-    <p class="caminho">SELECIONE UMA REGIÃO</p>
-  </div>
+    <ion-breadcrumbs class="caminhos">
+        <p class="caminho">SELECIONE UMA REGIÃO</p>
+    </ion-breadcrumbs>
   
-  <ion-card class="cards" *ngFor="let myData of getData()">
-    <ion-card-header class="card" (click)='goToPage(myData.host)'>
-      <ion-card-title class="text title">{{myData.title}}</ion-card-title>
-    </ion-card-header>
-  </ion-card>
+    <ion-card class="cards" *ngFor="let myData of getData()">
+        <ion-card-header class="card" (click)='goToPageCity(myData.title)'>
+            <ion-card-title class="text title">{{myData.title}}</ion-card-title>
+        </ion-card-header>
+    </ion-card>
 </ion-content>
 
 <ion-footer>
-  <div class="footer">
-    <ion-icon class="footer_image" (click)='goToPage("home")' name="home-outline"></ion-icon>
-    <ion-icon class="footer_image" (click)='goToPage("favorito")' name="star-outline"></ion-icon>
-    <ion-icon class="footer_image" (click)='goToPage("perfil")' name="person-outline"></ion-icon>
-  </div>
+    <div class="footer">
+        <ion-icon class="footer_image" (click)='goToPage("home")' name="home-outline"></ion-icon>
+        <ion-icon class="footer_image" (click)='goToPage("favorito")' name="star-outline"></ion-icon>
+        <ion-icon class="footer_image" (click)='goToPage("perfil")' name="person-outline"></ion-icon>
+    </div>
 </ion-footer>

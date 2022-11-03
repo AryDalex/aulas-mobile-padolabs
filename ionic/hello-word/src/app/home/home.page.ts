@@ -10,34 +10,29 @@ export class HomePage {
   
   private data: Interface[] = [{
       id: 1,
-      title: 'NORTE',
+      title: 'Norte',
       host: 'cidades'
     },
     {
       id: 2,
-      title: 'NOROESTE',
+      title: 'Nordeste',
       host: 'cidades'
     },
     {
       id: 3,
-      title: 'OESTE',
+      title: 'Centro-Oeste',
       host: 'cidades'
     },
     {
       id: 4,
-      title: 'CENTRO SUL',
+      title: 'Suldeste',
       host: 'cidades'
     },
     {
       id: 5,
-      title: 'CAMPOS GERAIS',
+      title: 'Sul',
       host: 'cidades'
-    },
-    {
-      id: 6,
-      title: 'LESTE',
-      host: 'cidades',
-    },
+    }
   ];
 
   constructor(private router: Router) { }
@@ -49,9 +44,15 @@ export class HomePage {
     return this.data;
   }
 
-  goToPage(host) {
-    this.router.navigate(['/' + host]);
-  }
+    goToPageCity(cidade) {
+        console.log(cidade);
+        this.router.navigate(['/cidades'], { state: { dados: cidade } });
+    }
+
+    goToPage(url) {
+        console.log(url);
+        this.router.navigate(['/' + url]);
+    }
 
 }
 

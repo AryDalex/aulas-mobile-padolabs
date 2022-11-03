@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CidadesService } from '../cidades.service';
 
 @Component({
   selector: 'app-cidades',
@@ -8,74 +9,36 @@ import { Router } from '@angular/router';
 })
 export class CidadesPage implements OnInit {
 
-  private data: Interface[] = [{
-    id: 1,
-    imageUrl: 'assets/londrina.png',
-    title: 'LONDRINA, PR',
-    subtitle: 'DESTINO',
-    p: 'Londrina é um município brasileiro localizado no estado do Paraná, na Região Sul do Brasil, distando 381 km da capital paranaense, Curitiba. É considerada pela CGU a cidade mais transparente do Paraná.',
-    button: 'VISUALIZAR CIDADE',
-    host: '/cidade'
-  },
-  {
-    id: 2,
-    imageUrl: 'assets/curitiba.png',
-    title: 'CURITIBA, PR',
-    subtitle: 'DESTINO',
-    p: 'Curitiba é a capital do estado do Paraná, na região sul do Brasil. A Torre Panorâmica, que tem um observatório em sua parte superior, destaca-se na silhueta da cidade.',
-    button: 'VISUALIZAR CIDADE',
-    host: '/cidade'
-  },
-  {
-    id: 3,
-    imageUrl: 'assets/maringa.png',
-    title: 'MARINGÁ, PR',
-    subtitle: 'DESTINO',
-    p: 'Maringá é um município brasileiro do estado do Paraná, sendo uma cidade média-grande planejada e de urbanização recente.',
-    button: 'VISUALIZAR CIDADE',
-    host: '/cidade'
-  },
-];
+    cidades: object;
+    regiao: string;
 
-constructor(private router: Router) { }
+    constructor(
+        private router: Router, 
+        private cidadesService: CidadesService
+    ) {
+        this.cidades = [];
+        this.regiao = '';
+    }
 
-ngOnInit() {
-}
+    goToPageCity(cidade) {
+        console.log(cidade);
+        this.router.navigate(['/cidade'], { state: { dados: cidade } });
+    }
 
-protected getData(): Interface[] {
-  return this.data;
-}
+    ngOnInit() {
+        this.regiao = history.state.dados;
 
-goToPage(host) {
-  this.router.navigate(['/' + host]);
-}
+        console.log(history.state);
 
-// Cidades: object;
+        this.cidadesService.getCitiesByRegion(this.regiao).subscribe(data => {
+            this.cidades = data;
+            console.log(this.cidades);
+        })
+    }
 
-// constructor(private router: Router, private CidadesService: CidadesService) {
-//   this.Cidades = [];
-// }
+    goToPage(url) {
+        console.log(url);
+        this.router.navigate(['/' + url]);
+    }
 
-// ngOnInit() {
-//   this.CidadesService.BuscarCidades().subscribe(data => {
-//     console.log(data);
-//     this.Cidades = data;
-//   })
-// }
-
-// goToPage(Cidade) {
-//   console.log(Cidade);
-//   this.router.navigate(['/cidade'], {state: { date: Cidade }});
-// }
-
-}
-
-interface Interface {
-id: number;
-imageUrl: string;
-title: string;
-subtitle: string;
-p: string;
-button: string;
-host: string;
 }

@@ -1,4 +1,51 @@
 <ion-header id="cabecalho">
+    <img 
+        class="img_logo" 
+        src="http://padolabs.github.io/assets/img/PadoLabsLogo.webp" 
+        alt="logo da padolabs">
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+
+    <ion-breadcrumbs class="caminhos">
+        <p class="caminho" (click)='goToPage("home")'>Home</p>
+        <p>></p>
+        <p class="caminho">{{regiao}}</p>
+    </ion-breadcrumbs>
+
+    <ion-card class="cards" *ngFor="let cidade of cidades">
+        <img 
+            class="img_cidade" 
+            src="{{cidade.cityImage}}" 
+            alt="foto da cidade"
+        />
+
+        <ion-card-header>
+            <div class="descricao">
+                <div class="div_star">
+                    <ion-card-subtitle class="text">DESTINO</ion-card-subtitle>
+                    <ion-icon class="star" name="star"></ion-icon>
+                </div>
+                <ion-card-title class="text title">{{cidade.cityName}}, {{cidade.cityUf}}</ion-card-title>
+                <ion-text class="text">{{cidade.cityShortDescription}}</ion-text>
+            </div>
+            <ion-button class="btn_mais" (click)='goToPageCity(cidade)' expand="full">
+                <ion-text>VISUALIZAR CIDADE</ion-text>
+            </ion-button>
+        </ion-card-header>
+    </ion-card>
+
+</ion-content>                                                                                         
+
+<ion-footer>
+  <div class="footer">
+      <ion-icon class="footer_image" (click)='goToPage("home")' name="home-outline"></ion-icon>
+      <ion-icon class="footer_image" (click)='goToPage("favorito")' name="star-outline"></ion-icon>
+      <ion-icon class="footer_image" (click)='goToPage("perfil")' name="person-outline"></ion-icon>
+  </div>
+</ion-footer>
+
+<!-- <ion-header id="cabecalho">
   <img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
 </ion-header>
 
@@ -19,7 +66,7 @@
     </ion-card-header>
   </ion-card>
 
-  <!-- <ion-card class="cards" *ngFor="let cidade of Cidades">
+  <ion-card class="cards" *ngFor="let cidade of Cidades">
     <img class="img_cidade" src="{{cidade.imagem}}" alt="foto da cidade">
     <ion-card-header>
       <ion-card-subtitle class="text">{{cidade.Cidade}}</ion-card-subtitle>
@@ -28,5 +75,5 @@
       <ion-card-content>{{cidade.description_curta}}</ion-card-content>
       <ion-button (click)='goToPage(cidade);' class="btn_mais">Visualizar</ion-button>
     <br>
-  </ion-card> -->
-</ion-content>
+  </ion-card>
+</ion-content> -->

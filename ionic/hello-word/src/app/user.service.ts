@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class UserService {
 
-  constructor(priveite http:HttpClient) { }
+  constructor(private http:HttpClient) { }
 
   userLogin(data: any): Observable<object> {
     const url = 'http://172.16.107.82:8080/login';
