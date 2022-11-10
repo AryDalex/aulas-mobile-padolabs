@@ -15,13 +15,11 @@ ion-content {
     margin: 1.2vw;
 }
 
-form {
-    width: 100%;
-    height: 50%;
+.registrar {
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 8px;
     padding: 20px;
     font-size: 12px;
@@ -34,7 +32,7 @@ form {
     color: #fff;
 }
 
-.btn_entbtn_registerrar {
+.btn_entrar {
     height: 6vh;
 }
 

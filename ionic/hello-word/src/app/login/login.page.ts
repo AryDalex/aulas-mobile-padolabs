@@ -9,8 +9,8 @@ import { UserService } from '../user.service';
 })
 export class LoginPage implements OnInit {
 
-    public email: String = undefined;
-    public password: String = undefined;
+    public userEmail: String = undefined;
+    public userPassword: String = undefined;
 
     constructor(private router: Router, private UserService: UserService) { }
 
@@ -19,8 +19,8 @@ export class LoginPage implements OnInit {
 
     onSubmit() {
         const data = {
-            email: this.email,
-            password: this.password,
+            userEmail: this.userEmail,
+            userPassword: this.userPassword,
         }
 
         this.UserService.userLogin(data).subscribe( data => {

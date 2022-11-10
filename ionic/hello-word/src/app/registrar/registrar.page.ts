@@ -9,11 +9,11 @@ import { UserService } from '../user.service';
 })
 export class RegistrarPage implements OnInit {
 
-    public name: String = undefined;
-    public email: String = undefined;
-    public password: String = undefined;
-    public uf: String = undefined;
-    public city: String = undefined;
+    public userName: String = undefined;
+    public userEmail: String = undefined;
+    public userPassword: String = undefined;
+    public userUf: String = undefined;
+    public userCity: String = undefined;
 
     constructor(private router: Router, private UserService: UserService) { }
 
@@ -22,20 +22,20 @@ export class RegistrarPage implements OnInit {
 
     onSubmit() {
         const data = {
-            name: this.name,
-            email: this.email,
-            password: this.password,
-            uf: this.uf,
-            city: this.city,
+            userName: this.userName,
+            userEmail: this.userEmail,
+            userPassword: this.userPassword,
+            userUf: this.userUf,
+            userCity: this.userCity,
         }
 
         this.UserService.userLogin(data).subscribe( data => {
-            this.router.navigate(['/home']);
+            this.router.navigate(['/login']);
         })
     }
 
-    goToPage(host) {
-        this.router.navigate(['/' + host]);
+    goToPage() {
+        this.router.navigate(['/login']);
     }
 
 }

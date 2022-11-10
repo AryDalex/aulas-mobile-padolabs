@@ -1,17 +1,41 @@
-<ion-content>
+<!-- <ion-content>
   <div class="logo">
     <img class="img_logo" src="../../assets/logo.png" alt="logo padolabs">
   </div>
 
-  <form>
-    <input class="input_register" type="text" placeholder="NOME COMPLETO"/>
-    <input class="input_register" type="email" placeholder="E-MAIL"/>
-    <input class="input_register" type="password" placeholder="SENHA"/>
-    <input class="input_register" type="text" placeholder="UF"/>
-    <input class="input_register" type="text" placeholder="CIDADE"/>
-    <ion-button (click)='goToPage("home")' class="btn_register">REGISTRAR</ion-button>
-  </form>
+  <input class="input_register" type="text" [{ngModel}]="userName"  placeholder="NOME COMPLETO"/>
+  <input class="input_register" type="email" [{ngModel}]="userEmail"  placeholder="E-MAIL"/>
+  <input class="input_register" type="password" [{ngModel}]="userPassword" placeholder="SENHA"/>
+  <input class="input_register" type="text" [{ngModel}]="userUf" placeholder="UF"/>
+  <input class="input_register" type="text" [{ngModel}]="userCity" placeholder="CIDADE"/>
+  <ion-button (click)='goToPage("home")' class="btn_register">REGISTRAR</ion-button>
+  
   <div class="voltar">
     <ion-button (click)='goToPage("login")' class="btn_voltar">VOLTAR</ion-button>
   </div>
-  </ion-content>
+  </ion-content> -->
+
+  <ion-content>
+    <div class="logo">
+        <img 
+            class="img_logo" 
+            src="http://padolabs.github.io/assets/img/PadoLabsLogo.webp" 
+            alt="logo da padolabs"
+        />
+    </div>
+
+    <div class="registrar">
+      <input class="input_register" [{ngModel}]="userName"  type="text" placeholder="NOME COMPLETO"/>
+      <input class="input_register" [{ngModel}]="userEmail"  type="email" placeholder="E-MAIL"/>
+      <input class="input_register" [{ngModel}]="userPassword" type="password" placeholder="SENHA"/>
+      <input class="input_register" [{ngModel}]="userUf" type="text" placeholder="UF"/>
+      <input class="input_register" [{ngModel}]="userCity" type="text" placeholder="CIDADE"/>
+
+      <ion-button (click)='onSubmit()' class="btn_register">REGISTRAR</ion-button>
+  </div>
+  
+  <div class="voltar">
+    <ion-button (click)='goToPage()' class="btn_voltar">VOLTAR</ion-button>
+  </div>
+
+</ion-content>
