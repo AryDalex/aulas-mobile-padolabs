@@ -8,9 +8,9 @@
 <ion-content color="dark">
 
 	<ion-breadcrumbs class="caminhos">
-        <p class="caminho" href="home">Home</p>
+        <p class="caminho" (click)='goToPage("home")'>Home</p>
 		<p>></p>
-        <p class="caminho" href="cidades">{{Cidade.cityRegion}}</p>
+        <p class="caminho" (click)='goToPage("cidades")'>{{Cidade.cityRegion}}</p>
 		<p>></p>
 		<p class="caminho">{{Cidade.cityName}}</p>
     </ion-breadcrumbs>
@@ -24,7 +24,7 @@
 
 		<ion-card-header>
 			<ion-card-subtitle class="text">DESTINO</ion-card-subtitle>
-			<ion-card-title class="text title">{{Cidade.cityRegion}}, {{Cidade.cityUf}}</ion-card-title>
+			<ion-card-title class="text title">{{Cidade.cityName}}, {{Cidade.cityUf}}</ion-card-title>
 		</ion-card-header>
 
 		<ion-card-content>

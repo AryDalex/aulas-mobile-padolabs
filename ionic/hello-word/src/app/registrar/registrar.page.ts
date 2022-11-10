@@ -3,39 +3,39 @@ import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-registrar',
-  templateUrl: './registrar.page.html',
-  styleUrls: ['./registrar.page.scss'],
+    selector: 'app-registrar',
+    templateUrl: './registrar.page.html',
+    styleUrls: ['./registrar.page.scss'],
 })
 export class RegistrarPage implements OnInit {
 
-  public name: String = undefined;
-  public email: String = undefined;
-  public password: String = undefined;
-  public uf: String = undefined;
-  public city: String = undefined;
+    public name: String = undefined;
+    public email: String = undefined;
+    public password: String = undefined;
+    public uf: String = undefined;
+    public city: String = undefined;
 
-  constructor(private router: Router) { }
+    constructor(private router: Router, private UserService: UserService) { }
 
-  ngOnInit() {
-  }
-
-  onSubmit() {
-    const data = {
-        name: this.name,
-        email: this.email,
-        password: this.password,
-        uf: this.uf,
-        city: this.city,
+    ngOnInit() {
     }
 
-    this.UserService.userLogin(data).subscribe( data => {
-        this.router.navigate(['/home']);
-    })
-}
+    onSubmit() {
+        const data = {
+            name: this.name,
+            email: this.email,
+            password: this.password,
+            uf: this.uf,
+            city: this.city,
+        }
 
-  goToPage(host) {
-    this.router.navigate(['/' + host]);
-  }
+        this.UserService.userLogin(data).subscribe( data => {
+            this.router.navigate(['/home']);
+        })
+    }
+
+    goToPage(host) {
+        this.router.navigate(['/' + host]);
+    }
 
 }
